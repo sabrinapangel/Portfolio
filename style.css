@@ -644,7 +644,6 @@ footer::before {
 }
 
 /* ================== RESPONSIVE ================== */
-
 @media (max-width: 768px) {
   .contact-info {
     flex-direction: column;
