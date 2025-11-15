@@ -1,4 +1,10 @@
-/* ==== SCROLL REVEAL ANIMATION ==== */
+/* ==== FONT LOCAL ==== */
+@font-face {
+  font-family: 'SabrinaFont';
+  src: url('Assets/impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}/* ==== SCROLL REVEAL ANIMATION ==== */
 
 .reveal {
   opacity: 0;
@@ -13,7 +19,7 @@
 
 /* ---------- BASE STYLES ---------- */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin: 0;
   background-color: #ffffff;
   scroll-behavior: smooth;
@@ -56,7 +62,7 @@ header nav a {
 
 /* ---------- SECTIONS ---------- */
 section {
-  padding: 160px;
+  padding: 100px;
 }
 
 /* ---------- HERO SECTION ---------- */
@@ -76,13 +82,19 @@ section {
   color: #21734C; /* hijau utama */
   margin-left: 5vw;
 }
-
+/* Graphic Designer (baris pertama) lebih kecil */
+.hero-left h1:first-line {
+  font-size: 1.7rem;
+  font-weight: 10;
+}
 .hero-left h1 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-weight: 100;
+  margin-bottom: 10px;
+  margin-top: 0;     /* <<< rapetin jarak ke atas */
   color: #21734C;
+  line-height: 0.7;
+  font-size: 7rem; /* default untuk Portfolio */
 }
 
 .hero-left p {
@@ -104,7 +116,7 @@ section {
 .status {
   background-color: #FF3385; /* pink aksen */
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 0;  /* <<< rapetin jarak ke h1 */
 }
 
 .primary-btn {
@@ -150,6 +162,35 @@ section {
   100% { transform: translateY(-20px); }
 }
 
+/* ==== FONT LOCAL ==== */
+@font-face {
+  font-family: 'Impact';
+  src: url('Assets/fonts/Impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==== CUSTOM HEADING ==== */
+.sabrina-heading {
+  font-family: 'Impact', sans-serif;
+  font-size: 5rem;
+  margin-bottom: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hello-outline {
+  color: white;
+  -webkit-text-stroke: 0.3px #21734C;
+  font-family: 'Impact', sans-serif;
+}
+
+.hello-solid {
+  color: #21734C;
+  font-family: 'Impact', sans-serif;
+}
+
 /* ---------- ABOUT SECTION ---------- */
 .about {
   display: flex;
@@ -162,12 +203,6 @@ section {
   max-width: 55%;
 }
 
-.about-text h2 {
-  font-size: 3rem;
-  color: #21734C;
-  margin-bottom: 10px;
-}
-
 .about-text p {
   color: #21734C;
   line-height: 1.6;
@@ -176,8 +211,8 @@ section {
 
 /* PROFILE IMAGE */
 .profile-img {
-  width: 300px;
-  border-radius: 20px;
+  width: 475px;
+  border-radius: 10px;
   object-fit: cover;
   pointer-events: none;
 }
@@ -185,7 +220,6 @@ section {
 /* ---------- INFO CARDS ---------- */
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   margin-top: 40px;
 }
@@ -205,7 +239,7 @@ section {
 
 .card img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 8px; /* biar lebih halus */
+  border-radius: 8px;
 }
 
 .card img:hover {
@@ -247,6 +281,7 @@ details[open] summary::after {
   to { opacity: 1; transform: translateY(0); }
 }
 
+
 /* ---------- TAGS ---------- */
 .tags {
   display: flex;
@@ -268,7 +303,145 @@ details[open] summary::after {
   box-shadow: 0 6px 15px rgba(255, 146, 179, 0.4);
 }
 
-/* ---------- PROJECTS SECTION ---------- */
+/* ---------- ENTRY FORMAT ---------- */
+.entry {
+  margin-top: 0.8rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.entry-meta {
+  font-size: 0.85rem;
+  color: #21734C;
+}
+
+.entry-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #21734C;
+  margin-top: 2px;
+}
+
+.entry-sub {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #21734C;
+  margin-top: 2px;
+}
+
+/* ---------- SUBPOINTS ---------- */
+.subpoints {
+  margin-top: 8px;
+  padding-left: 20px;
+  color: #21734C;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.subpoints li {
+  list-style: none;
+}
+
+
+@font-face {
+  font-family: 'Impact';
+  src: url('Assets/Impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==== PROJECTS HEADING ==== */
+/* ===== PROJECTS HEADING ===== */
+.projects-heading {
+  font-family: 'Impact', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.projects-outline {
+  color: white;
+  -webkit-text-stroke: 0.8px #FF3385;
+  font-family: 'Impact', sans-serif;
+}
+
+.projects-solid {
+  color: #FF3385;
+  font-family: 'Impact', sans-serif;
+}
+
+/* ==== POPUP PLACEHOLDER ==== */
+.popup-placeholder {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.placeholder-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  opacity: 0.5;
+}
+
+.placeholder-text {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+/* ===== PROJECTS SECTION ===== */
+@font-face {
+  font-family: 'Impact';
+  src: url('Assets/Impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==== PROJECTS HEADING ==== */
+.projects-heading {
+  font-family: 'Impact', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.projects-outline {
+  color: white;
+  -webkit-text-stroke: 0.4px #FF3385;
+  font-family: 'Impact', sans-serif;
+}
+
+.projects-solid {
+  color: #FF3385;
+  font-family: 'Impact', sans-serif;
+}
+
+/* ==== POPUP PLACEHOLDER ==== */
+.popup-placeholder {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.placeholder-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  opacity: 0.5;
+}
+
+.placeholder-text {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
 /* ===== PROJECTS SECTION ===== */
 .projects {
   background-color: #ffffff;
@@ -425,6 +598,8 @@ details[open] summary::after {
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .popup:target .popup-content {
@@ -446,8 +621,6 @@ details[open] summary::after {
 }
 
 /* ===== POPUP COLOR THEMES ===== */
-
-/* PACKAGING POPUP */
 #packaging-popup .popup-content {
   background-color: #42DD9B;
   color: #1c4b33;
@@ -461,7 +634,6 @@ details[open] summary::after {
   color: #E1FFC1;
 }
 
-/* SOCIAL POPUP */
 #social-popup .popup-content {
   background-color: #FEF284;
   color: #6b4a00;
@@ -475,7 +647,6 @@ details[open] summary::after {
   color: #FFCC33;
 }
 
-/* POSTER POPUP */
 #poster-popup .popup-content {
   background-color: #D1C5F5;
   color: #3d2c8d;
@@ -504,6 +675,7 @@ details[open] summary::after {
 .close-button:hover {
   color: #b4b4b4;
 }
+
 
 /* ---------- FOOTER ---------- */
 footer {
